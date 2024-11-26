@@ -1,0 +1,68 @@
+@use '@styles/text/break.scss' as break;
+@use '@styles/text.scss' as text;
+
+.block {
+  margin: 0;
+}
+
+.normal {
+  @include text.common;
+}
+
+.keep-all {
+  @include text.keep-all;
+}
+
+.break-all {
+  @include text.break-all;
+}
+
+.break-word {
+  @include text.break-word;
+}
+
+// font-size
+.small {
+  @include text.small;
+}
+
+.medium {
+  @include text.medium;
+}
+
+.large {
+  @include text.large;
+}
+
+.larger {
+  @include text.larger;
+}
+
+.largest {
+  @include text.largest;
+}
+
+// font-weight
+.light {
+  @include text.light;
+};
+
+.normal {
+  @include text.normal;
+};
+
+.semi-bold {
+  @include text.semi-bold;
+};
+
+.bold {
+  @include text.bold;
+};
+
+.extra-bold {
+  @include text.extra-bold
+};
+
+.black {
+  @include text.black
+}
