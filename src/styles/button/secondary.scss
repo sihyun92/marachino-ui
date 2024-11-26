@@ -1,0 +1,34 @@
+@use '@styles/color.scss' as color;
+
+// Default
+@mixin hover {
+  background: color.$grape_4;
+  border: 1px solid color.$grape_4;
+  color: color.$white;
+}
+
+@mixin disabled {
+  background: color.$grape_2;
+  color: color.$grape_4;
+  cursor: default;
+  border: 1px solid color.$grape_2;
+}
+
+@mixin active {
+  background: color.$grape_2;
+  color: color.$grape_4;
+  border: 1px solid color.$grape_2;
+}
+
+// Outline
+@mixin outline-hover {
+  background: color.$grape_5;
+  color: color.$black;
+  border: 1px solid color.$grape_5;
+}
+
+@mixin outline-active {
+  background: color.$grape_2;
+  border: 1px solid color.$grape_2;
+  color: color.$grape_9;
+}

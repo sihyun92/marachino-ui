@@ -1,0 +1,33 @@
+@use '@styles/color.scss' as color;
+
+@mixin hover {
+  background: color.$green_4;
+  border: 1px solid color.$green_4;
+  color: color.$white;
+}
+
+@mixin disabled {
+  background: color.$green_2;
+  color: color.$green_6;
+  cursor: default;
+  border: 1px solid color.$green_2;
+}
+
+@mixin active {
+  background: color.$green_2;
+  color: color.$green_6;
+  border: 1px solid color.$green_2;
+}
+
+// Outline
+@mixin outline-hover {
+  background: color.$green_5;
+  border: 1px solid color.$green_5;
+  color: color.$white;
+}
+
+@mixin outline-active {
+  background: color.$green_2;
+  border: 1px solid color.$green_2;
+  color: color.$green_9;
+}

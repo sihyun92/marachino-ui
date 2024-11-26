@@ -1,0 +1,129 @@
+@use '@styles/color.scss' as color;
+@use '@styles/button/primary.scss' as primary;
+@use '@styles/button/secondary.scss' as secondary;
+@use '@styles/button/accept.scss' as accept;
+@use '@styles/button/cancel.scss' as cancel;
+
+// Primary
+@mixin primary {
+  background: color.$blue_5;
+  border: 1px solid color.$blue_5;
+  color: color.$black;
+  &:hover {
+    @include primary.hover;
+  }
+  &:disabled {
+    @include primary.disabled;
+  }
+  &:active:not(:disabled) {
+    @include primary.active;
+  }
+}
+
+@mixin primary-outline {
+  background: none;
+  border: 1px solid color.$blue_5;
+  color: color.$blue_5;
+  &:hover {
+    @include primary.outline-hover;
+  }
+  &:disabled {
+    @include primary.disabled;
+  }
+  &:active:not(:disabled) {
+    @include primary.outline-active;
+  }
+}
+
+// Secondary
+@mixin secondary {
+  background: color.$grape_6;
+  color: color.$black;
+  border: 1px solid color.$grape_6;
+  &:hover {
+    @include secondary.hover;
+  }
+  &:disabled {
+    @include secondary.disabled;
+  }
+  &:active:not(:disabled) {
+    @include secondary.active;
+  }
+}
+
+@mixin secondary-outline {
+  background: none;
+  border: 1px solid color.$grape_5;
+  color: color.$grape_5;
+  &:hover {
+    @include secondary.outline-hover;
+  }
+  &:disabled {
+    @include secondary.disabled;
+  }
+  &:active:not(:disabled) {
+    @include secondary.outline-active;
+  }
+}
+
+// Accept
+@mixin accept {
+  background: color.$green_6;
+  border: 1px solid color.$green_6;
+  color: color.$white;
+  &:hover {
+    @include accept.hover;
+  }
+  &:disabled {
+    @include accept.disabled;
+  }
+  &:active:not(:disabled) {
+    @include accept.active;
+  }
+}
+
+@mixin accept-outline {
+  background: none;
+  border: 1px solid color.$green_6;
+  color: color.$green_6;
+  &:hover {
+    @include accept.outline-hover;
+  }
+  &:disabled {
+    @include accept.disabled;
+  }
+  &:active:not(:disabled) {
+    @include accept.outline-active;
+  }
+}
+
+// Cancel
+@mixin cancel {
+  background: color.$red_7;
+  border: 1px solid color.$red_7;
+  color: color.$white;
+  &:hover {
+    @include cancel.hover;
+  }
+  &:disabled {
+    @include cancel.disabled;
+  }
+  &:active:not(:disabled) {
+    @include cancel.active;
+  }
+}
+
+@mixin cancel-outline {
+  background: none;
+  border: 1px solid color.$red_6;
+  color: color.$red_6;
+  &:hover {
+    @include cancel.outline-hover;
+  }
+  &:disabled {
+    @include cancel.disabled;
+  }
+  &:active:not(:disabled) {
+    @include cancel.outline-active;
+  }
+}

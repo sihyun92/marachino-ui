@@ -1,0 +1,66 @@
+@use "@styles/text/size.scss" as size;
+@use "@styles/text/weight.scss" as weight;
+@use '@styles/text/break.scss' as break;
+
+// font-size
+@mixin small {
+  font-size: size.$small;
+}
+
+@mixin medium {
+  font-size: size.$medium;
+}
+
+@mixin large {
+  font-size: size.$large;
+}
+
+@mixin larger {
+  font-size: size.$larger;
+}
+
+@mixin largest {
+  font-size: size.$largest;
+}
+
+// font-weight
+@mixin light {
+  font-weight: weight.$light;
+}
+
+@mixin normal {
+  font-weight: weight.$normal;
+}
+
+@mixin semi-bold {
+  font-weight: weight.$semi-bold;
+}
+
+@mixin bold {
+  font-weight: weight.$bold;
+}
+
+@mixin extra-bold {
+  font-weight: weight.$extra-bold;
+}
+
+@mixin black {
+  font-weight: weight.$black;
+}
+
+// word-break
+@mixin common {
+  word-break: break.$normal;
+}
+
+@mixin keep-all {
+  word-break: break.$keep-all;
+}
+
+@mixin break-all {
+  word-break: break.$break-all;
+}
+
+@mixin break-word {
+  word-break: break.$break-word;
+}
