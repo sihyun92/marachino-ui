@@ -1,0 +1,81 @@
+@use "@styles/sizes.scss" as size;
+@use "@styles/button.scss" as button;
+@use "@styles/color.scss" as color;
+@use "@styles/font.scss" as font;
+
+.block {
+  background: color.$black;
+  color: color.$white;
+  border: none;
+  padding: 16px 20px;
+  font-size: 16px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid color.$black;
+}
+
+.shadow {
+  box-shadow: 2px 2px 4px rgba($color: #000, $alpha: 0.7);
+}
+
+// Size
+.small {
+  padding: size.$small;
+  font-size: 16px;
+}
+
+.medium {
+  padding: size.$medium;
+  font-size: 18px;
+}
+
+.large {
+  padding: size.$large;
+  font-size: 20px;
+}
+
+// Shape
+.box {
+  border-radius: 0;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+// Primary
+.primary {
+  @include button.primary;
+}
+
+.primary-outline {
+  @include button.primary-outline;
+}
+
+// Secondary
+.secondary {
+  @include button.secondary;
+}
+
+.secondary-outline {
+  @include button.secondary-outline;
+}
+
+// Accept
+.accept {
+  @include button.accept;
+}
+
+.accept-outline {
+  @include button.accept-outline;
+}
+
+// Cancel
+.cancel {
+  @include button.cancel;
+}
+
+.cancel-outline {
+  @include button.cancel-outline;
+}
