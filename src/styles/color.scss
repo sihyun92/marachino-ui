@@ -157,3 +157,61 @@ $orange_6: #fd7e14;
 $orange_7: #f76707;
 $orange_8: #e8590c;
 $orange_9: #d9480f;
+
+// color-map
+$color-map: (
+  black: ("0": $black),
+  white: ("0": $white),
+  gray: (
+    "0": $gray_0, "1": $gray_1, "2": $gray_2, "3": $gray_3, "4": $gray_4, 
+    "5": $gray_5, "6": $gray_6, "7": $gray_7, "8": $gray_8, "9": $gray_9
+  ),
+  red: (
+    "0": $red_0, "1": $red_1, "2": $red_2, "3": $red_3, "4": $red_4,
+    "5": $red_5, "6": $red_6, "7": $red_7, "8": $red_8, "9": $red_9
+  ),
+  pink: (
+    "0": $pink_0, "1": $pink_1, "2": $pink_2, "3": $pink_3, "4": $pink_4,
+    "5": $pink_5, "6": $pink_6, "7": $pink_7, "8": $pink_8, "9": $pink_9
+  ),
+  grape: (
+    "0": $grape_0, "1": $grape_1, "2": $grape_2, "3": $grape_3, "4": $grape_4,
+    "5": $grape_5, "6": $grape_6, "7": $grape_7, "8": $grape_8, "9": $grape_9
+  ),
+  violet: (
+    "0": $violet_0, "1": $violet_1, "2": $violet_2, "3": $violet_3, "4": $violet_4,
+    "5": $violet_5, "6": $violet_6, "7": $violet_7, "8": $violet_8, "9": $violet_9
+  ),
+  indigo: (
+    "0": $indigo_0, "1": $indigo_1, "2": $indigo_2, "3": $indigo_3, "4": $indigo_4,
+    "5": $indigo_5, "6": $indigo_6, "7": $indigo_7, "8": $indigo_8, "9": $indigo_9
+  ),
+  blue: (
+    "0": $blue_0, "1": $blue_1, "2": $blue_2, "3": $blue_3, "4": $blue_4,
+    "5": $blue_5, "6": $blue_6, "7": $blue_7, "8": $blue_8, "9": $blue_9
+  ),
+  cyan: (
+    "0": $cyan_0, "1": $cyan_1, "2": $cyan_2, "3": $cyan_3, "4": $cyan_4,
+    "5": $cyan_5, "6": $cyan_6, "7": $cyan_7, "8": $cyan_8, "9": $cyan_9
+  ),
+  teal: (
+    "0": $teal_0, "1": $teal_1, "2": $teal_2, "3": $teal_3, "4": $teal_4,
+    "5": $teal_5, "6": $teal_6, "7": $teal_7, "8": $teal_8, "9": $teal_9
+  ),
+  green: (
+    "0": $green_0, "1": $green_1, "2": $green_2, "3": $green_3, "4": $green_4,
+    "5": $green_5, "6": $green_6, "7": $green_7, "8": $green_8, "9": $green_9
+  ),
+  lime: (
+    "0": $lime_0, "1": $lime_1, "2": $lime_2, "3": $lime_3, "4": $lime_4,
+    "5": $lime_5, "6": $lime_6, "7": $lime_7, "8": $lime_8, "9": $lime_9
+  ),
+  yellow: (
+    "0": $yellow_0, "1": $yellow_1, "2": $yellow_2, "3": $yellow_3, "4": $yellow_4,
+    "5": $yellow_5, "6": $yellow_6, "7": $yellow_7, "8": $yellow_8, "9": $yellow_9
+  ),
+  orange: (
+    "0": $orange_0, "1": $orange_1, "2": $orange_2, "3": $orange_3, "4": $orange_4,
+    "5": $orange_5, "6": $orange_6, "7": $orange_7, "8": $orange_8, "9": $orange_9
+  )
+);
