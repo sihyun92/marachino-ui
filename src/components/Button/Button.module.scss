@@ -1,38 +1,32 @@
-@use "@styles/sizes.scss" as size;
-@use "@styles/button.scss" as button;
-@use "@styles/color.scss" as color;
-@use "@styles/font.scss" as font;
+@use '@styles/color.scss' as *;
+@use '@styles/sizes.scss' as *;
+@use '@styles/button.scss' as *;
+
+// color-mapping
+@each $color, $shades in $color-map {
+  @each $index, $value in $shades {
+    // background color class
+    .bg-#{"#{$color}"}-#{$index} {
+      background: $value;
+    }
+
+    // text color class
+    .text-#{"#{$color}"}-#{$index} {
+      color: $value;
+    }
+
+    .border-#{"#{$color}"}-#{$index} {
+      border-color: $value;
+    }
+  }
+}
 
 .block {
-  background: color.$black;
-  color: color.$white;
-  border: none;
   padding: 16px 20px;
   font-size: 16px;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   font-weight: 500;
-  border: 1px solid color.$black;
-}
-
-.shadow {
-  box-shadow: 2px 2px 4px rgba($color: #000, $alpha: 0.7);
-}
-
-// Size
-.small {
-  padding: size.$small;
-  font-size: 16px;
-}
-
-.medium {
-  padding: size.$medium;
-  font-size: 18px;
-}
-
-.large {
-  padding: size.$large;
-  font-size: 20px;
 }
 
 // Shape
@@ -44,38 +38,53 @@
   border-radius: 10px;
 }
 
-// Primary
-.primary {
-  @include button.primary;
+// size
+.small {
+  padding: $small;
+  font-size: 16px;
 }
 
-.primary-outline {
-  @include button.primary-outline;
+.medium {
+  padding: $medium;
+  font-size: 18px;
 }
 
-// Secondary
-.secondary {
-  @include button.secondary;
+.large {
+  padding: $large;
+  font-size: 20px;
 }
 
-.secondary-outline {
-  @include button.secondary-outline;
+// black color
+.bg-black {
+  background: $black;
 }
 
-// Accept
-.accept {
-  @include button.accept;
+.text-black {
+  color: $black;
 }
 
-.accept-outline {
-  @include button.accept-outline;
+.border-black {
+  border-color: $black;
 }
 
-// Cancel
-.cancel {
-  @include button.cancel;
+// white color
+.bg-white {
+  background: $white;
 }
 
-.cancel-outline {
-  @include button.cancel-outline;
+.text-white {
+  color: $white;
+}
+
+.border-white {
+  border-color: $white;
+}
+
+// shadow
+.light {
+  box-shadow: 2px 2px 4px rgba($color: #000, $alpha: 0.3);
+}
+
+.heavy {
+  box-shadow: 2px 2px 4px rgba($color: #000, $alpha: 0.7);
 }

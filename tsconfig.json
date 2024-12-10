@@ -16,7 +16,10 @@
       "@styles/*": ["src/styles/*"],
       "@lib/*": ["src/lib/*"]
     },
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "declaration": true,
+    "composite": true,
+    "declarationMap": true
   },
   "include": [],
   "files": [],
