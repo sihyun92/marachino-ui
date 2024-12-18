@@ -1,41 +1,46 @@
-import { ModalProps } from "../../lib/interface/modal.interface";
+import { ModalProps } from "@lib/interface/modal.interface";
 import styles from "../Modal/Modal.module.scss";
 import classNames from "classnames/bind";
-import { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 
 const cx = classNames.bind(styles);
 
 export default function Modal({ ...rest }: ModalProps) {
-  // position
-  const isPosition = rest.position ? "position" : "";
+  // Hooks & Function
+  const [modalClose, setModalClose] = useState(false);
+
+  const onClose = () => {
+    setModalClose(true);
+  };
 
   // shadow
   const isShadow = rest.shadow ? "shadow" : "";
 
   // Dynamic Style
   const dynamicStyle: CSSProperties = {
-    border: rest.outline || undefined,
-    padding: rest.padding || undefined,
-    width: rest.width || undefined,
-    height: rest.height || undefined,
-    zIndex: rest.zIndex || undefined,
-    outline: rest.outline || undefined,
-    background: rest.background || undefined,
+    width: rest.width,
+    height: rest.height,
   };
 
   return rest.backdrop ? (
-    <div className={cx(`backdrop`)}>
-      <div
-        className={cx("block", isPosition, isShadow)}
-        style={dynamicStyle}
-        {...rest}
-      />
+    modalClose ? null : (
+      <div className={cx(`backdrop`)}>
+        <div className={cx("block", isShadow)} style={dynamicStyle} {...rest}>
+          <button className={cx("close")} onClick={onClose}>
+            <span />
+            <span />
+          </button>
+          {rest.children}
+        </div>
+      </div>
+    )
+  ) : modalClose ? null : (
+    <div className={cx("block", isShadow)} style={dynamicStyle} {...rest}>
+      <button className={cx("close")} onClick={onClose}>
+        <span />
+        <span />
+      </button>
+      {rest.children}
     </div>
-  ) : (
-    <div
-      className={cx("block", isPosition, isShadow)}
-      style={dynamicStyle}
-      {...rest}
-    />
   );
 }
