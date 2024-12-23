@@ -1,0 +1,54 @@
+@use '@styles/color.scss' as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .prefix {
+    position: absolute;
+    left: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .block {
+    padding: 8px;
+    outline: none;
+    border: none;
+    &.has-prefix {
+      padding-left: 32px;
+    }
+  }
+
+  // style
+  .box {
+    background: $gray-1;
+    &:focus {
+      background: $blue-1;
+    }
+  }
+
+  .line {
+    border: none;
+    border-bottom: 2px solid $gray-4;
+    &:focus {
+      border-bottom: 2px solid $blue-1;
+    }
+  }
+
+  // size
+  .small {
+    width: 320px;
+  }
+  
+  .medium {
+    width: 768px;
+  }
+  
+  .large {
+    width: 1200px;
+  }
+}
+
+
