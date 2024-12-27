@@ -1,0 +1,37 @@
+@use '@styles/color.scss' as *;
+
+.block {
+  border: none;
+  outline: none;
+  background: $gray-4;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+
+  &.checked {
+    background: $green-5;
+  }
+
+  .circle {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $white;
+    transition: left 0.3s ease;
+    left: 3px;
+    box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.checked {
+      left: calc(100% - 27px);
+    }
+  }
+}
